@@ -47,6 +47,7 @@ form {
     display: flex;
     justify-content: space-between;
     margin-top: 45px;
+    flex-direction: column;
     align-items: center;
     .checkbox {
       display: flex;
@@ -59,18 +60,19 @@ form {
   }
   .btn-wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
     margin-top: 30px;
     .btn {
-      padding: 12px;
-      width: 30%;
+      padding: 14px;
       background-color: transparent;
       border: none;
       text-transform: uppercase;
       font-weight: 900;
       border-radius: 4px;
+      min-width: 80%;
       cursor: pointer;
     }
     .btn-primary {
@@ -80,5 +82,17 @@ form {
       border: 2px solid var(--lighter-grey);
 
     }
+  }
+}
+
+@media (min-width: 768px) {
+  form .btn-wrapper {
+    flex-direction: row;
+    .btn {
+      min-width: 40%;
+    }
+  }
+  form .checkbox-wrapper {
+    flex-direction: row;
   }
 }
