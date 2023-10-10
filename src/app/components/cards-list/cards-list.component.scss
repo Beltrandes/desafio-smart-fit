@@ -1,0 +1,13 @@
+.card-list {
+  display: flex;
+  width: 74%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  @media (min-width: 838px) {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,26 @@
+<div class="card-container">
+  <span [ngClass]="{ opened: card.opened }">{{
+    card.opened ? "Aberto" : "Fechado"
+  }}</span>
+  <h3>{{ card.title }}</h3>
+  <p [innerHTML]="card.content"></p>
+  <div class="divider"></div>
+  <div class="images">
+    <img [src]="'assets/images/png/' + card.mask + '-mask.png'" alt="" />
+    <img [src]="'assets/images/png/' + card.towel + '-towel.png'" alt="" />
+    <img
+      [src]="'assets/images/png/' + card.fountain + '-fountain.png'"
+      alt=""
+    />
+    <img
+      [src]="'assets/images/png/' + card.locker_room + '-lockerroom.png'"
+      alt=""
+    />
+  </div>
+  <ul>
+    <li *ngFor="let schedule of card.schedules">
+      <strong>{{ schedule.weekdays }}</strong>
+      {{ schedule.hour }}
+    </li>
+  </ul>
+</div>
