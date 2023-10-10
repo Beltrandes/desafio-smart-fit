@@ -26,11 +26,11 @@
       .icon {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        width: 100%;
+        width: 50%;
         img {
-          width: 60%;
+          width: 70px;
         }
         span {
           font-weight: 500;
@@ -41,14 +41,44 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1150px) {
+  .labels-container {
+    flex-direction: column;
+    .label {
+      .label-icons {
+        .icon {
+          img {
+            width: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 595px) {
+  .labels-container {
+    flex-direction: column;
+    .label {
+      .label-icons {
+        .icon {
+          img {
+            width: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
   .labels-container {
     flex-direction: row;
     .label {
       .label-icons {
         .icon {
           img {
-            width: 55px;
+            width: 60px;
           }
         }
       }

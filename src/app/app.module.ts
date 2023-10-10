@@ -7,18 +7,26 @@ import { HeaderComponent } from './components/header/header.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { LabelsComponent } from './components/labels/labels.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CardsListComponent } from './components/cards-list/cards-list.component';
+import { CommonModule } from '@angular/common';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FormsComponent,
-    LabelsComponent
+    LabelsComponent,
+    CardsListComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

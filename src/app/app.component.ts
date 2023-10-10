@@ -1,4 +1,7 @@
+import { BehaviorSubject } from 'rxjs';
 import { Component } from '@angular/core';
+import { UnitLocation } from './types/unit-location.interface';
+import { UnitsService } from './services/units.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'desafio-smart-fit';
+  showList = new BehaviorSubject(false)
+  unitsList: UnitLocation[] = []
+
+  constructor(private unitService: UnitsService) {}
+
+  onSubmit() {
+    this.unitsList = this.unitService.getFilteredUnits()
+    this.showList.next(true)
+  }
 }

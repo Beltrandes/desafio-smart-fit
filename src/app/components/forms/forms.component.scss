@@ -48,6 +48,8 @@ form {
     justify-content: space-between;
     margin-top: 45px;
     flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
     align-items: center;
     .checkbox {
       display: flex;
@@ -79,7 +81,7 @@ form {
       background-color: var(--yellow);
     }
     .btn-secondary {
-      border: 2px solid var(--lighter-grey);
+      border: 1px solid var(--lighter-grey);
 
     }
   }
@@ -94,5 +96,6 @@ form {
   }
   form .checkbox-wrapper {
     flex-direction: row;
+    font-size: 16px;
   }
 }
